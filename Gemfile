@@ -20,6 +20,7 @@ gem 'font-awesome-sass', '~> 5.0.13'
 gem 'bootstrap-will_paginate', '~> 1.0.0'
 gem "hirb"
 gem "hirb-unicode"
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
