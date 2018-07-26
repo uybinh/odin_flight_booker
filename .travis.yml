@@ -1,0 +1,22 @@
+language: ruby
+rvm:
+- 2.5.1
+cache:
+- bundler
+- directories:
+  - "/home/travis/.rvm/"
+services:
+- postgresql
+before_script:
+- cp config/database.yml config/database.yml.back
+- cp config/database.yml.travis.yml config/database.yml
+- psql -c 'create database travis_ci_test;' -U postgres
+script:
+- bundle exec rails db:migrate RAILS_ENV=test
+- bundle exec rails test
+after_script:
+- cp config/database.yml config/database.yml.travis.yml
+- mv config/database.yml.back config/database.yml
+notifications:
+  slack:
+    secure: SpkTqAwPPcvwijUpxfY8kbIcOoGQEHs5qufS/UmZPbzGdOezYZexob3orez7xkui9y1Tc9QNXlKrb+TyFVWowSwFhwFNJ78ErNGzMZqrZH+SYjnhfq6wKXalLWtBQ9PGnebBOgSaUeB7Ogq7hsayyGqUywwR344HEK5cREO+H1zyq/o7IWug33aMwc+Kot9B8z+6eytDMmp6IF4UAsakixGImJYPKERDWRIuYMyDUn3hcUNN0/pw+JvAgIwK/LkcGTcT1O4RWPJCp4y7UwUoKdq0d0Dr/r5aPTs2nO7Iz5oymn2GpNmQR69XXeyrIceu2EJRXd16EZxlS+02cwsUWxgpPhQw8bjBJNGQtWXYorkAd2EvE0efn8nEacxvOWhMXGH0lzEpCkA+l7lBttCYtA6dFEPFBXK1mGiY64tL0o+yf8KaBivwssQvHNF3mkTKgvNZEfEcitUAFfBmGWJHyO9KKOWPbDZ0A9F4bBYs9PDJMLrECXS+eqOgOmCu1Ojpr3tpelaSaL5kGI/ka1Jp0zhaB/DQX1M252ab8FtgtDW3QW5ePWe8CzcRyQgza1SOuGHPGeD2YsedrCrChv7pRhY0h8jnuUU0mh4ZcKz8ID3UW5pVjCtwmtTMVtNwIneK2dNNwb4uYGiwZT9IiLIKR/bNt7W/1SvefK1buTnZ7nI=
