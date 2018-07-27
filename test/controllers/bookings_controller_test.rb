@@ -2,7 +2,7 @@ require 'test_helper'
 
 class BookingsControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
-    get bookings_new_url
+    get new_booking_path
     assert_response :success
   end
 
