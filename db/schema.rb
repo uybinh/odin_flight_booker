@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2018_07_26_152233) do
     t.bigint "from_airport_id"
     t.bigint "to_airport_id"
     t.datetime "date"
+    t.float "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["from_airport_id"], name: "index_flights_on_from_airport_id"
