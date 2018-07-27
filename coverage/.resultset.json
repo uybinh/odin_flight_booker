@@ -1,42 +1,67 @@
 {
   "MiniTest": {
     "coverage": {
+      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/models/flight.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/models/airport.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/controllers/flights_controller.rb": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/helpers/flights_helper.rb": [
+        1,
+        null
+      ],
       "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/models/airport.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/models/flight.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/models/application_record.rb": [
-        0,
-        0,
-        0
-      ],
       "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/controllers/application_controller.rb": [
-        0,
-        0
-      ],
-      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/helpers/application_helper.rb": [
         0,
         0
       ],
@@ -53,6 +78,6 @@
         0
       ]
     },
-    "timestamp": 1532620353
+    "timestamp": 1532654550
   }
 }

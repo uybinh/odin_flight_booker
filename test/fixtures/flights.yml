@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  from_airport: 
-  to_airport: 
+  from_airport: saigon
+  to_airport: incheon
   date: 2018-07-26 22:22:33
 
 two:
-  from_airport: 
-  to_airport: 
+  from_airport: incheon
+  to_airport: saigon
   date: 2018-07-26 22:22:33

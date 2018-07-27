@@ -6,6 +6,8 @@
   <%= select(nil, :date, @date_options )%>
   <%= f.submit "Search" %>
 <% end %>
-<% @flights.each do |flight| %>
-  <p><%= flight.date %>. From: <%= @origin.name %>, To: <%= @destination.name %></p>
+<% unless @flights.nil? %>
+  <% @flights.each do |flight| %>
+    <p><%= flight.date %>. From: <%= @origin.name %>, To: <%= @destination.name %></p>
+  <% end %>
 <% end %>
