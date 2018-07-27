@@ -1,0 +1,10 @@
+  <%= form_tag "/bookings/new", method: :get do %>
+    <% @flights.each do |flight| %>
+      <div class="form-check">
+        <%= radio_button_tag :flight_id, flight.id %>
+        <%= label_tag "flight_id_#{flight.id}", flight.date, class: "form-check-label" %>
+      </div>
+    <% end %>
+    <%= hidden_field_tag :num_tickets, @num_tickets %>
+    <%= submit_tag "Select flight" %>
+  <% end %>

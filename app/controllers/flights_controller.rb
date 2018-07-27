@@ -1,11 +1,12 @@
 class FlightsController < ApplicationController
   def index
-    @date_options = Flight.group("DATE(date)").count.map {|date, count| [date.strftime("%Y-%m-%d"), date.strftime("%Y%m%d")]}
-    @origin = Airport.find_by(code: params[:from_code])
-    @destination = Airport.find_by(code: params[:to_code])
+    @date_options = Flight.all_dates
+    @airports = Airport.all.map { |ap| [ap.code, ap.code] }
+    @ticket_options = (1..4).map {|n| [n, n]}
+
     if params.include?(:date)
-      @date = Date.strptime(params[:date],"%Y%m%d")
-      @flights = Flight.where(date: @date.all_day, from_airport: @origin, to_airport: @destination)
+      @num_tickets = params[:num_tickets]
+      @flights = Flight.search(params)
     end
   end
 end

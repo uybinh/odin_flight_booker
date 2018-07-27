@@ -1,0 +1,15 @@
+<div>
+  <span> <strong>From:</strong> <%= @booking.flight.from_airport.name %></span>
+  <span> <strong>To:</strong> <%= @booking.flight.to_airport.name %></span>
+  <span> <strong>Duration:</strong> <%= pluralize(@booking.flight.duration, "hour") %></span>
+</div>
+
+<div>
+  <ul>
+    <% @booking.passengers.each do |passenger| %>
+    <li>
+      <%= passenger.name %>
+    </li>
+    <% end %>
+  </ul>
+</div>

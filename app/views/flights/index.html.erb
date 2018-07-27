@@ -1,13 +1,12 @@
-<h1>Flights#index</h1>
-<p>Find me in app/views/flights/index.html.erb</p>
-<%= form_for :flight, url: "/flights", method: :get do |f| %>
-  <%= collection_select(nil, :from_code, Airport.all, :code, :code) %>
-  <%= collection_select(nil, :to_code, Airport.all, :code, :code) %>
-  <%= select(nil, :date, @date_options )%>
-  <%= f.submit "Search" %>
+<h1>Flights search</h1>
+<%= form_for :flight, url: "/flights", method: :get, html: {class: "form-inline"} do |f| %>
+  <%= select_tag(:from_code, options_for_select(@airports, params[:from_code]), class: "custom-select") %>
+  <%= select_tag(:to_code, options_for_select(@airports, params[:to_code]), class: "custom-select") %>
+  <%= select_tag(:date, options_for_select(@date_options, params[:date]), class: "custom-select") %>
+  <%= select_tag(:num_tickets, options_for_select(@ticket_options, params[:num_tickets]), class: "custom-select") %>
+  <%= f.submit "Search", class: "btn btn-primary" %>
 <% end %>
-<% unless @flights.nil? %>
-  <% @flights.each do |flight| %>
-    <p><%= flight.date %>. From: <%= @origin.name %>, To: <%= @destination.name %></p>
-  <% end %>
+
+<% unless @flights.nil? || @flights.empty? %>
+  <%= render "flights/search_result" %>
 <% end %>
