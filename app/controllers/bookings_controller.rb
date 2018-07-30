@@ -7,8 +7,8 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-
     if @booking.save
+      PassengerMailer.thankyou_email(@booking).deliver_now
       redirect_to @booking
     else
       puts @booking.errors.full_messages

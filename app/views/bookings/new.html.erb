@@ -7,6 +7,7 @@
             <%= booking_form.fields_for :passengers do |passenger_form| %>
           <div class="col-sm-6 col-md-4">
               <div class="form-group">
+                <%= passenger_form.hidden_field :id %>
                 <%= passenger_form.label :name, "Passenger #{count = count + 1}:", class: "" %>
                 <div class="">
                   <%= passenger_form.text_field :name, class: "form-control" %>

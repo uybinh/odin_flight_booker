@@ -27,8 +27,7 @@
         1,
         1,
         null,
-        1,
-        1,
+        null,
         null,
         null,
         null
@@ -71,32 +70,17 @@
         null,
         null
       ],
-      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/controllers/bookings_controller.rb": [
+      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/controllers/flights_controller.rb": [
         1,
         1,
         1,
+        3,
         1,
-        1,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
         null,
         1,
         0,
-        null,
-        null,
-        1,
-        1,
         0,
+        null,
         null,
         null
       ],
@@ -116,19 +100,49 @@
         1,
         null
       ],
-      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/controllers/flights_controller.rb": [
+      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/controllers/bookings_controller.rb": [
         1,
         1,
         1,
-        3,
-        5,
+        1,
+        1,
+        null,
         null,
         1,
         0,
         0,
+        0,
+        0,
         null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
         null,
         null
+      ],
+      "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/mailers/passenger_mailer.rb": [
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0
       ],
       "/Users/uybinh/Dropbox/programming/learning/the_odin_project/projects/odin-flight-booker/app/mailers/application_mailer.rb": [
         0,
@@ -153,6 +167,6 @@
         0
       ]
     },
-    "timestamp": 1532961138
+    "timestamp": 1532965572
   }
 }

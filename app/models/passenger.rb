@@ -3,7 +3,7 @@ class Passenger < ApplicationRecord
   has_many :bookings, through: :booking_informations
   has_many :flights, through: :bookings
 
-  validates :name, presence: true, uniqueness: true
-  validates :email, presence: true, uniqueness: true
+  # validates :name, presence: true, uniqueness: true
+  # validates :email, presence: true, uniqueness: true
 
 end
