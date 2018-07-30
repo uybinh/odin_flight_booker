@@ -1,0 +1,10 @@
+Thank you for chosing our airline!
+
+Here is your booking information
+  * Flight from <%= @flight.from_airport.name %> (<%= @flight.from_airport.code %>) to <%= @flight.to_airport.name %> (<%= @flight.to_airport.code %>)
+  * Date: <%= @flight.date %>
+  * Duration: <%= @flight.duration %>
+  * Passengers infomation:
+<% @passengers.each do |passenger| %>
+    * <%= passenger.name %>
+<% end %>

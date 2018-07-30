@@ -1,0 +1,16 @@
+<h2>Thank you for chosing our airline!</h2>
+
+<p>Here is your booking information</p>
+<ul>
+  <li>Flight from <%= @flight.from_airport.name %> (<%= @flight.from_airport.code %>) to <%= @flight.to_airport.name %> (<%= @flight.to_airport.code %>)
+</li>
+  <li>Date: <%= @flight.date %></li>
+  <li>Duration: <%= @flight.duration %></li>
+  <li>Passengers infomation:
+    <ul>
+      <% @passengers.each do |passenger| %>
+      <li><%= passenger.name %></li>
+      <% end %>
+    </ul>
+  </li>
+</ul>
